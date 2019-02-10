@@ -22,11 +22,10 @@ posts = [
 def main():
 	return render_template('homepage.html', title='Home', user=user, posts=posts) # Stampa sulla pagina il file homepage.html con i parametri forniti
 
-# Pagina effettiva del test
-@app.route('/test')
+# Prima pagina di domande
+@app.route('/test/1')
 def test():
-	return render_template('test.html', title='Test', user=user)
-	
+	return render_template('test1.html', title='Test', user=user)	
 
 # Pagina dei risultati
 @app.route('/results')
