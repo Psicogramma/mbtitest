@@ -1,7 +1,7 @@
 <?php
 
 
-########### ritorna un array con associate domande e funzioni ###################
+########### ritorna un array con domande e funzioni mbti associate ###################
  
 function IOquestions($filename)
 {
