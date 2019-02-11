@@ -19,7 +19,7 @@ $domande = shuffle_assoc($domande);
 
  ?>
 
-    <!-------------------- carico la struttura html e le domande  ------------------------------------------------------------->
+    <!-- carico la struttura html e le domande  ------------------------------------------------------------->
 
     <form method="POST" action="calcola.php">
 
