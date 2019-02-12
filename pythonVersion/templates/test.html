@@ -5,25 +5,21 @@
     </head>
 
     <body>
+        {{domanda}}
         
-        <form action='/results' method="post">   
-            <input type="radio" name="d1"  value="1">
-            <input type="radio" name="d1" value="2" >
-            <input type="radio" name="d1" value="3">
-            
-            <br>
-
-            <input type="radio" name="d2"  value="1">
-            <input type="radio" name="d2" value="2" >
-            <input type="radio" name="d1" value="3">
-            
-            <br>
-
-            <input type="radio" name="d3"  value="1">
-            <input type="radio" name="d3" value="2" >
-            <input type="radio" name="d3" value="3">
+        <form action='/results' method="post">
+            <ul>
+                    {% for d in domande %}
+                        {{loop.index|string + ')'}} {{d}} <br>
+                        <input type="radio" name="d{{loop.index}}" value="1"> 
+                        <input type="radio" name="d{{loop.index}}" value="2"> 
+                        <input type="radio" name="d{{loop.index}}" value="3">
+                        <input type="radio" name="d{{loop.index}}" value="4"> 
+                        <input type="radio" name="d{{loop.index}}" value="5"> <br>
+                    {% endfor %}
+            </ul> 
 
             <input type="submit" name="next">                  
-        </form>        
+        </form>
     </body>
 </html>
